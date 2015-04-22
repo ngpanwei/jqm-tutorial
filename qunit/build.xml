@@ -2,7 +2,11 @@
 <project name="jqm-tutorial" default="packaging" basedir=".">
 	<target name="packaging" description="packaging all">
 		<jar destfile="all.zip" description="Pack everything">
-			<zipfileset dir="public_html" />
+			<zipfileset dir="app" prefix="app"/>
+			<zipfileset dir="calcUI" prefix="calcUI"/>
+			<zipfileset dir="triangle" prefix="triangle"/>
+			<zipfileset dir="libs" prefix="libs"/>
+			<zipfileset dir="jquery.mobile-1.4.5" prefix="jquery.mobile-1.4.5" />
 		</jar>
     </target>
 </project>

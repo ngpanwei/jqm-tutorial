@@ -3,5 +3,8 @@ var triangle = {
     	    if(a!=b) return false ;
     	    if(b!=c) return false ;
     		return true ;
-    }		
+    },
+    isIsosceles : function(a,b,c) {
+    	    return true ;
+    }
 };

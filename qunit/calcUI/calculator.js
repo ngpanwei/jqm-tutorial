@@ -1,13 +1,17 @@
 var calculator = {
 	memory : 0 ,
 	number : 0 ,
+	initialize : function() {
+	    this.memory = 0 ;
+	    this.number = 0 ;
+	},
 	numberPressed : function(num) {
 		console.log("number pressed: "+num) ;
 		this.number = this.number * 10 + num ;
 		calculatorUI.setDisplay(this.number) ;
 	},
 	operatorPressed : function(operator) {
-		console.log("operator pressed: "+operator) ;	
+		alert("operator pressed: "+operator) ;	
 	},
 	equalPressed : function() {
 		console.log("equal pressed") ;
@@ -58,5 +62,6 @@ var calculatorUI = {
 	}
 };
 $(document).ready(function() {
+	calculator.initialize() ;
 	calculatorUI.initialize() ;
 });

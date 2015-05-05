@@ -4,16 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../libs/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="../libs/qunit/qunit-1.18.0.css"></head>
+	<link rel="stylesheet" href="../libs/css/error.css">
 	<script src="../libs/jquery.min.js"></script>
 	<script src="../libs/jquery.storageapi.min.js"></script>
 	<script src="../libs/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../libs/jquery.validate.min.js"></script>
     <script src="local.js"></script>
+    <script src="app.js"></script>
     <title>storien</title>
 </head>
 <body>
-<div data-role="page" id="pgSettings" data-title="设置">
+<div data-role="page" id="pgSettings" data-title="用户设置">
 	<div data-role="header" data-position="fixed" data-theme="a">
-		<h1>设置</h1>
+		<h1>用户设置</h1>
 	</div>
 	<div data-role="main" class="ui-content">
     	  <form id="signInForm" class="ui-body ui-body-a ui-corner-all">
@@ -26,15 +30,19 @@
           <label for="password">密码:</label>
           <input name="password" id="password" value="" type="password"></input>
         </div>
-	    <button type="submit" data-theme="a" name="submit" id="submitRegistration" 
+	    <button type="submit" data-theme="a" name="submit" id="submitSignIn" 
 	            value="signin">登入</button>
-      </form>	
+      </form>
+      <div id="userHome">
+      	<h1 id="username">Welcome</h1>
+	    <button type="submit" data-theme="a" name="submit" id="submitLogOut" 
+	            value="logout">注销</button>
+      </div>
 	</div>
 	<div data-role="footer" data-position="fixed" data-theme="a">
 	    <div data-role="navbar">
 	      <ul>
 	        <li><a href="#pgSettings" data-prefetch="true" data-transition="flip">设置</a></li>
-	        <li><a href="#pgUserHome" data-prefetch="true" data-transition="flip">用户管理</a></li>
 	        <li><a href="#pgTestHome" data-prefetch="true" data-transition="flip">测试</a></li>
 	      </ul>
 	    </div>
@@ -52,11 +60,13 @@
     <div data-role="navbar">
       <ul>
 	    <li><a href="#pgSettings" data-prefetch="true" data-transition="flip">设置</a></li>
-        <li><a href="#pgUserHome" data-prefetch="true" data-transition="flip">用户管理</a></li>
         <li><a href="#pgTestHome" data-prefetch="true" data-transition="flip">测试</a></li>
       </ul>
     </div>
   </div>
 </div>
 </body>
+  <script src="../libs/qunit/qunit-1.18.0.js"></script>
+  <script src="appTest.js"></script>
+  <script src="log.js"></script>
 </html>

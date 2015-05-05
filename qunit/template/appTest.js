@@ -1,5 +1,11 @@
-QUnit.test("equilateral have three equal sides", function( assert ) {
-	assert.equal(triangle.isEquilateral(2,2,2),true,"2,2,2 is equilateral") ;
-	assert.equal(triangle.isEquilateral(0,0,0),true,"0,0,0 is not equilateral") ;
-	assert.equal(triangle.isEquilateral(-1,-1,-1),true,"-1,-1,-1 is not equilateral") ;
+QUnit.test("Test-A", function( assert ) {
+	assert.equal(true,true,"equal") ;
+});
+QUnit.test("Test-B", function( assert ) {
+	assert.equal(false,false,"equal") ;
+	assert.equal(false,true,"equal") ;
+});
+QUnit.test("Test-C", function( assert ) {
+	assert.equal(false,false,"equal") ;
+	assert.equal(false,true,"equal") ;
 });

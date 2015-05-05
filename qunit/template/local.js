@@ -64,11 +64,13 @@ var app = {
 		return false ;
 	},	
 	submitScore : function(score) {
+		userVO = appModel.getUser() ;
 		$.ajax({
 			type: "POST",
 			url: "http://www.storien.com/app/score/TrackScore.php" ,
 			dataType : "json",
 			data: { 
+				user : userVO ,
 				score : score ,
 			} ,
 			error: function (xhr, ajaxOptions, thrownError) {

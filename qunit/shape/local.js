@@ -64,13 +64,12 @@ var app = {
 		return false ;
 	},	
 	submitScore : function(score) {
-		console.log("submitScore") ;
 		userVO = appModel.getUser() ;
 		if(userVO==null) {
-			console.log("user not defined") ;
+			console.log("user not defined, probably not loged in.") ;
 			return ;
 		}
-		console.log("user: "+userVO.username) ;
+		console.log("user: "+userVO.username+" submitting test results.") ;
 		$.ajax({
 			type: "POST",
 			url: "http://www.storien.com/app/score/TrackScore.php" ,
@@ -91,6 +90,7 @@ var app = {
 	afterSubmit : function(result) {
 		console.log("total",result.data.score.total,
 				    "rank",result.data.rank) ;
+		$("#rank").text(result.message) ;
 	}
 } ;
 $(document).ready(function() {    

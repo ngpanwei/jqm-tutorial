@@ -9,6 +9,12 @@
 			<zipfileset dir="jquery.mobile-1.4.5" prefix="jquery.mobile-1.4.5" />
 		</jar>
     </target>
+	<target name="shape" description="packaging all">
+		<jar destfile="shape.zip" description="Pack shape">
+			<zipfileset dir="shape" prefix="shape"/>
+			<zipfileset dir="libs" prefix="libs"/>
+		</jar>
+    </target>
 	<target name="koans" description="packaging all">
 		<jar destfile="koans.zip" description="Pack everything">
 			<zipfileset dir="koans" prefix="koans"/>
